@@ -1,0 +1,8 @@
+---
+- name: Shutdown the whole cluster
+  hosts: nodes
+  become: true
+  
+  tasks:
+    - name: Shutdown all hosts
+      community.general.shutdown:

@@ -1,0 +1,4 @@
+- name: upgrade the host
+  # sudo apt-get [ update | full-upgrade | dist-upgrade ]
+  ansible.builtin.apt: 
+    upgrade: '{{ apt_upgrad_method }}'

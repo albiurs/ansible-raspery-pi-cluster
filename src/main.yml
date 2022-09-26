@@ -1,6 +1,8 @@
 ---
 - name: Deployment of a Raspberry Pi Proxmox Cluster
   hosts: nodes
+  become: true
+  
   roles:
     #- ping
     - upgrade-host

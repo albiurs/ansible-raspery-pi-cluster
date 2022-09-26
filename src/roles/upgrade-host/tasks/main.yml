@@ -4,3 +4,12 @@
 - name: Update apt cache
   ansible.builtin.import_tasks: update-apt-cache.yml
   when: ansible_os_family == 'Debian'
+
+- name: Upgrade upgrade-host
+  ansible.builtin.import_tasks: upgrade-host.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Remove dependencies that are no longer required
+  ansible.builtin.import_tasks: autoremove.yml
+  when: ansible_os_family == 'Debian'
+  

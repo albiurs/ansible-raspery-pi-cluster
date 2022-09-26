@@ -1,5 +1,4 @@
 - name: update the apt package cache index
   # sudo apt-get update
-  become: true
   ansible.builtin.apt: 
     update_cache: yes
