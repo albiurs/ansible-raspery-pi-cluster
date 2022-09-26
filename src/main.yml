@@ -2,7 +2,8 @@
 - name: Deployment of a Raspberry Pi Proxmox Cluster
   hosts: nodes
   become: true
-  
+
   roles:
-    #- ping
+    - ping
+    # upgrade method must be defined in group vars
     - upgrade-host
