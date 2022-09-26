@@ -2,5 +2,5 @@
 # tasks file for upgrade-host
 
 - name: Update apt cache
-  include_tasks: update-apt-cache.yml
+  ansible.builtin.import_tasks: update-apt-cache.yml
   when: ansible_os_family == 'Debian'
