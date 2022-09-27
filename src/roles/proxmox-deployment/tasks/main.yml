@@ -1,0 +1,9 @@
+---
+# tasks file for proxmox-deployment
+
+- name: Download foo.conf
+  ansible.builtin.get_url:
+
+    url: https://raw.githubusercontent.com/pimox/pimox7/master/RPiOS64-IA-Install.sh
+    dest: 
+    mode: '0440'

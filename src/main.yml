@@ -2,8 +2,11 @@
 - name: Deployment of a Raspberry Pi Proxmox Cluster
   hosts: nodes
   become: true
+  become_method: sudo
 
   roles:
-    - ping
     # upgrade method must be defined in group vars
-    - upgrade-host
+    - host-upgrader
+    - app-installer
+    #- proxmox-deployment
+    

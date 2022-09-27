@@ -2,4 +2,4 @@
 
 # apt upgrade method [dist | full | no (=default) | [safe | yes] ]
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#parameter-upgrade
-apt_upgrad_method: 'safe'
+apt_upgrad_method: 'full'
