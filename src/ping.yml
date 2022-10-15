@@ -3,4 +3,4 @@
   hosts: nodes
 
   roles:
-    - ping
+    - pinger

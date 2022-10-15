@@ -3,6 +3,8 @@
   hosts: nodes
   become: true
   become_method: sudo
+  serial:
+  - 1
 
   roles:
     # upgrade method must be defined in group vars
