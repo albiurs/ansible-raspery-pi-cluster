@@ -1,7 +1,8 @@
 ---
-- name: Shutdown the whole cluster
+- name: Reboot the whole cluster
   hosts: nodes
   become: true
+  become_method: sudo
   
   tasks:
   - name: Reboot a slow machine that might have lots of updates to apply
