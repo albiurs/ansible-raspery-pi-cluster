@@ -1,0 +1,9 @@
+---
+- name: Shutdown the whole cluster
+  hosts: nodes
+  become: true
+  
+  tasks:
+  - name: Reboot a slow machine that might have lots of updates to apply
+    ansible.builtin.reboot:
+      reboot_timeout: 0
