@@ -3,8 +3,14 @@
   hosts: nodes
   become: true
   become_method: sudo
-  
+  serial:
+  - 1
+
   tasks:
-  - name: Reboot a slow machine that might have lots of updates to apply
+  - name: Reboot target host/s
     ansible.builtin.reboot:
-      reboot_timeout: 0
+      # Reboot timeout: Maximum seconds to wait for machine to reboot and respond to a test command.
+      reboot_timeout: 360
+
+  - name: Ping target host/s
+    ansible.builtin.ping:
