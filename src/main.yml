@@ -10,5 +10,4 @@
     # upgrade method must be defined in group vars
     - host-upgrader
     - app-installer
-    #- proxmox-deployment
-    
+    # - proxmox-deployment
